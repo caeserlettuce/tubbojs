@@ -1,4 +1,4 @@
-# tubboJS, the new way to use databases
+# ![(tubboJS logo)](https://github.com/caeserlettuce/tubbojs/blob/master/tubbojs90.png?raw=true "tubboJS") tubboJS, the new way to use databases 
 
 
 TubboJS is a JS library for using simple databases. This will absolutely not be better than most SQL languages, but i'm writing it mainly for myself to use.
@@ -6,6 +6,8 @@ TubboJS is a JS library for using simple databases. This will absolutely not be 
 *this project is in no way affiliated with [Tubbo.](https://twitch.tv/tubbo)*
 
 if there are any bugs or issues, use the fancy github issue tracker (tm)
+
+
 
 
 use
