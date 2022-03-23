@@ -2,6 +2,7 @@
 var http = require('http');
 var fs = require('fs');
 var mug = require('./functions');
+var tubbo = require('./tubbo');
 
 // init
 
@@ -42,3 +43,5 @@ var server = http.createServer(function (req, resp) {   // da server
 server.listen(5050);
  
 mug.log('Server Started listening on 5050');
+
+tubbo.deb("testing tm", "test");
