@@ -7,12 +7,12 @@ const fs = require("fs");
 
 // variables init
 
-var tubbo_debug = true;         // if tubbo will semd debug messages to console
-var tubbo_log = true;           // if tubbo will save logs of everything that happens (reccomended only for testing)
+var tubbo_debug = false;         // if tubboJS will semd debug messages to console
+var tubbo_log = false;           // if tubboJS will save logs of everything that happens (reccomended only for testing)
 var tubbo_prefix = "TUBBOJS";   // prefix used in debug messages
 var tubbo_folder = "tubbojs";   // name of the working folder all tubbojs databases n stuff will be saved in
 var tubbo_log_folder = "logs";  // name of the folder all the logs will be saved in (this folder will be inside working folder)
-var tubbo_log_filename = getDate().replace(":", "-").replace(":", "-").replace(" ", "_");
+var tubbo_log_filename = getDate().replace(":", "-").replace(":", "-").replace(" ", "_");   // dont touch this
 var tubbo_database_json = '{}'; // default json to be added
 
 if (tubbo_debug == true) {
@@ -29,14 +29,13 @@ if (fs.existsSync(`${tubbo_folder}`)) {
     fs.mkdirSync(`${tubbo_folder}`);
 }
 
-if (tubbo_log == true) {
-    if (fs.existsSync(`${tubbo_folder}/${tubbo_log_folder}`)) {
-        console.log(`[${tubbo_prefix} INIT]: tubbo log folder exists.`);
-    } else {
-        console.log(`[${tubbo_prefix} INIT]: tubbo log folder does not exist. creating.`);
-        fs.mkdirSync(`${tubbo_folder}/${tubbo_log_folder}`);
-    }
+if (fs.existsSync(`${tubbo_folder}/${tubbo_log_folder}`)) {
+    console.log(`[${tubbo_prefix} INIT]: tubbo log folder exists.`);
+} else {
+    console.log(`[${tubbo_prefix} INIT]: tubbo log folder does not exist. creating.`);
+    fs.mkdirSync(`${tubbo_folder}/${tubbo_log_folder}`);
 }
+
 console.log(`[${tubbo_prefix} INIT]: tubbo folders loaded.`);
 
 function getDate() {            // get date
@@ -97,6 +96,22 @@ function save(database, new_data) {
     });
 }
 
+function debug(bool) {
+    if (bool == true) {
+        tubbo_debug = true;
+    } else {
+        tubbo_debug = false;
+    }
+}
+
+function log(bool) {
+    if (bool == true) {
+        tubbo_log = true;
+    } else {
+        tubbo_log = false;
+    }
+}
+
 //var test_database = database("test");
 
 //test_database["name"] = "caeserlettuce";
@@ -109,3 +124,5 @@ function save(database, new_data) {
 exports.deb = deb;
 exports.database = database;
 exports.save = save;
+exports.debug = debug;
+exports.log = log;
