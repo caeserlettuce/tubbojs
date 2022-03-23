@@ -71,7 +71,7 @@ function deb(message, funcy) {                                      // DEBUG FUN
 
 function database(name) {
     deb(`looking for '${tubbo_folder}/${name}.json'...`, 'database');
-    var rawJSON = "";
+    var rawJSON = `${tubbo_database_json}`;
     if (fs.existsSync(`${tubbo_folder}/${name}.json`)) {
         deb(`database file exists, writing to it!`, 'database');
         // exists
@@ -112,12 +112,7 @@ function log(bool) {
     }
 }
 
-//var test_database = database("test");
 
-//test_database["name"] = "caeserlettuce";
-//test_database["age"] = 1;
-
-//save("test", test_database);
 
 //exports.<alias> = <function name>;
 
