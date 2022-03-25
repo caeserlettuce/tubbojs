@@ -1,12 +1,14 @@
 # ![(tubboJS logo)](https://github.com/caeserlettuce/tubbojs/blob/master/tubbojs90.png?raw=true "tubboJS") tubboJS, the new way to use databases
 
+![node 16.14.0](https://img.shields.io/badge/node-16.14.0-blue?style=flat-square)
+![javacript percentage](https://img.shields.io/github/languages/top/caeserlettuce/tubbojs?style=flat-square)
+![last commit](https://img.shields.io/github/last-commit/caeserlettuce/tubbojs?style=flat-square)
 
 TubboJS is a JS library for using simple databases. This will absolutely not be better than most SQL languages, but i'm writing it mainly for myself to use.
 
 *this project is in no way affiliated with [Tubbo.](https://twitch.tv/tubbo)*
 
 if there are any bugs or issues, use the fancy github issue tracker (tm)
-
 
 
 use
